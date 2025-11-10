@@ -430,8 +430,70 @@ header {
   color: #00c1c7; 
   font-size: 14px; 
 }
-
+/* --------------------------
+   Popular Courses Section
+--------------------------- */
 #popular-courses {
+  padding: 60px 5%;
+  background: #e8f5e9;
+  text-align: center;
+}
+
+#popular-courses h2 {
+  font-size: 32px;
+  color: #1b5e20;
+  margin-bottom: 40px;
+}
+
+#popular-courses .course-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* --------------------------
+   Responsive Design
+--------------------------- */
+
+/* ✅ Mobile (up to 767px): 1 card per row */
+@media (max-width: 767px) {
+  #popular-courses .course-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #popular-courses .course-card {
+    flex: 1 1 100%;
+    max-width: 90%;
+  }
+}
+
+
+
+/*#popular-courses {
   padding: 60px 5%;
   background: #e8f5e9;
   text-align: center;
@@ -472,7 +534,7 @@ header {
 .course-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 25px rgba(0,0,0,0.2);
-}
+}*/
 
 
 #instructors { 
@@ -683,7 +745,7 @@ header {
     max-width: calc(50% - 20px);
   }
 
-  #popular-courses .course-card {
+ #popular-courses .course-card {
     flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
   }
@@ -696,10 +758,7 @@ header {
   .feature-box { width: 220px; }
 
  
-  #popular-courses .course-card {
-  flex: 1 1 calc(33.33% - 20px);
-  max-width: calc(33.33% - 20px);
-}
+  
 
 }
 
@@ -725,9 +784,9 @@ header {
   .feature-box { width: 20%; }
 
 #popular-courses .course-card {
-  flex: 1 1 calc(25% - 20px);
-  max-width: calc(25% - 20px);
-} 
+    flex: 1 1 calc(33.33% - 24px);
+    max-width: calc(33.33% - 24px);
+  }
 
 #popular-courses .courses-container {
   justify-content: space-between;
